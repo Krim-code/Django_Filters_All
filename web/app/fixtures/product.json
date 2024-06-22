@@ -1,0 +1,83 @@
+[
+    {
+        "model": "app.category",
+        "pk": 1,
+        "fields": {
+            "name": "Electronics"
+        }
+    },
+    {
+        "model": "app.category",
+        "pk": 2,
+        "fields": {
+            "name": "Books"
+        }
+    },
+    {
+        "model": "app.category",
+        "pk": 3,
+        "fields": {
+            "name": "Clothing"
+        }
+    },
+    {
+        "model": "app.product",
+        "pk": 1,
+        "fields": {
+            "name": "Smartphone",
+            "price": "699.99",
+            "rating": 4.5,
+            "is_available": true,
+            "description": "Latest model with advanced features.",
+            "created_at": "2024-06-01T12:00:00Z",
+            "updated_at": "2024-06-01T12:00:00Z",
+            "color": "blue",
+            "categories": [1]  
+        }
+    },
+    {
+        "model": "app.product",
+        "pk": 2,
+        "fields": {
+            "name": "Laptop",
+            "price": "999.99",
+            "rating": 4.7,
+            "is_available": true,
+            "description": "Powerful laptop for professionals.",
+            "created_at": "2024-06-05T12:00:00Z",
+            "updated_at": "2024-06-05T12:00:00Z",
+            "color": "green",
+            "categories": [1]  
+        }
+    },
+    {
+        "model": "app.product",
+        "pk": 3,
+        "fields": {
+            "name": "Novel",
+            "price": "19.99",
+            "rating": 4.0,
+            "is_available": true,
+            "description": "Bestselling fiction novel.",
+            "created_at": "2024-06-10T12:00:00Z",
+            "updated_at": "2024-06-10T12:00:00Z",
+            "color": "red",
+            "categories": [2]  
+        }
+    },
+    {
+        "model": "app.product",
+        "pk": 4,
+        "fields": {
+            "name": "T-Shirt",
+            "price": "14.99",
+            "rating": 4.2,
+            "is_available": true,
+            "description": "Comfortable and stylish.",
+            "created_at": "2024-06-15T12:00:00Z",
+            "updated_at": "2024-06-15T12:00:00Z",
+            "color": "blue",
+            "categories": [3] 
+        }
+    }
+]

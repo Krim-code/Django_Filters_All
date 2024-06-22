@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+    <style>
+        .filter-form {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product List</h1>
+
+    <form method="get" class="filter-form">
+        {{ filter.form.as_p }}
+        <button type="submit">Filter</button>
+    </form>
+
+    <ul>
+        {% for product in products %}
+            <li>
+                <strong>{{ product.name }}</strong> - ${{ product.price }} - 
+                {% if product.is_available %}Available{% else %}Not Available{% endif %}
+                <p>{{ product.description }}</p>
+                <p>Rating: {{ product.rating }}</p>
+                <p>Categories: 
+                    {% for category in product.categories.all %}
+                        {{ category.name }}{% if not forloop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+                <p>Color: {{ product.color }}</p>
+                <p>Created At: {{ product.created_at }}</p>
+                <p>Updated At: {{ product.updated_at }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
